@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> CCTJ Insurance Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="dashboard">
+            
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#home"><img src="images/homeicon.png" alt="Home" title="Home" class="sidebar-icon"></a></li>
+                    <li><a href="#messages"><img src="images/messageicon.jpeg" alt="Messages" title="Messages" class="sidebar-icon"></a></li>
+                    <li><a href="#claims"><img src="images/claimicon.png" alt="Claims" title="Claims" class="sidebar-icon"></a></li>
+                    <li><a href="#contact"><img src="images/contacticon.png" alt="Contact" title="Contact" class="sidebar-icon"></a></li>
+                </ul>
+            </nav>
+            
+            
+            <div class="main-content">
+                <header>
+                    <div class="top-right-options">
+                        <button class="file-claim-button">File a Claim</button>
+                        <button class="customize-button"><i class="fas fa-cog"></i> Customize</button>
+                    </div>
+                </header>
+                
+                <section class="dashboard-main">
+                    <div class="user-image">
+                        <img id="userImage" src="user-placeholder.png" alt="User Image" />
+                        <div class="upload-options">
+                            <input type="file" id="photoUpload" accept="image/*" onchange="previewImage(event)" />
+                            <button onclick="openGallery()">Pick from Gallery</button>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-welcome">
+                        <h2>Welcome, John </h2>
+                        <div class="dashboard-buttons">
+                            <button class="dashboard-btn">View Policies</button>
+                            <button class="dashboard-btn">Make a Payment</button>
+                            <button class="dashboard-btn">View Claims</button>
+                            <button class="dashboard-btn">Insurance Card</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <script>
+        
+        function previewImage(event) {
+            const imgElement = document.getElementById('userImage');
+            imgElement.src = URL.createObjectURL(event.target.files[0]);
+        }
+
+       
+        function openGallery() {
+            alert("Open gallery to select an image.");
+            
+        }
+    </script>
+    </body>
+</html>
+
+
+
+

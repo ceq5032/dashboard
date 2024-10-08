@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.dashboard {
+    display: flex; 
+}
+
+
+.sidebar {
+    width: 60px; 
+    background-color: #f8f9fa; 
+    height: 100vh; 
+}
+
+.sidebar ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.sidebar-icon {
+    width: 24px; 
+    height: auto; 
+    display: block; 
+    margin: 10px auto; 
+}
+
+
+.main-content {
+    flex: 1; 
+    padding: 20px; 
+    position: relative; 
+}
+
+
+header {
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 10px; 
+    background-color: #f4f4f4; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+
+.top-right-options {
+    display: flex; 
+    gap: 15px; 
+}
+
+.file-claim-button,
+.customize-button {
+    background-color: #004d99; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.file-claim-button:hover,
+.customize-button:hover {
+    background-color: #003366; 
+}
+
+
+.dashboard-main {
+    display: flex; 
+    margin-top: 20px; 
+}
+
+
+.user-image {
+    flex: 1; 
+    text-align: center; 
+}
+
+.upload-options {
+    margin-top: 10px;
+}
+
+
+.dashboard-welcome {
+    flex: 2; 
+    padding-left: 20px; 
+}
+
+.dashboard-buttons {
+    margin-top: 20px;
+}
+
+.dashboard-btn {
+    padding: 10px 15px; 
+    margin: 5px; 
+}
+
+
+
+
+

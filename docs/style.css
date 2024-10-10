@@ -95,15 +95,49 @@ header {
     padding-left: 20px; 
 }
 
-.dashboard-buttons {
+/*.dashboard-buttons {
     margin-top: 20px;
-}
+}*/
 
-.dashboard-btn {
+/*.dashboard-btn {
     padding: 10px 15px; 
-    margin: 5px; 
+    margin: 5px; */
+}
+.item {
+  background: #305077;
+  max-width:100px;
+  border: solid 2px #000000;
+  text-align: center;
+  font-size: 2.2em;
+  color: white;
+  margin: 2px;
+  font-weight: bold;
+  line-height: 1;
+}
+.container {
+    border:blue 2px;
+    background: navy;
+    max-width:100px;
+    margin-right: 1em;
+    display: grid;
+    height: 400px;
+    align-content: center;
+    
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: navy;
+  padding: 10px;
 }
 
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
 
 
 

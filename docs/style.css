@@ -120,16 +120,19 @@ header {
     max-width:100px;
     margin-right: 1em;
     display: grid;
-    height: 400px;
+    height: 1000px;
+    width: 50px;
     align-content: center;
     
 }
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   background-color: navy;
   padding: 10px;
+  justify-items:;
+  align-items:;
 }
 
 .grid-container > div {
@@ -137,6 +140,7 @@ header {
   border: 1px solid black;
   text-align: center;
   font-size: 30px;
+  
 }
 
 

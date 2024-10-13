@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> CCTJ Insurance Dashboard</title>
+        <title>CCTJ Insurance Dashboard</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -12,42 +12,39 @@
             
             <nav class="sidebar">
                 <ul>
-                    <li><a href="#home"><img src="images/homeicon.png" alt="Home" title="Home" class="sidebar-icon"></a></li>
-                    <li><a href="#messages"><img src="images/messageicon.jpeg" alt="Messages" title="Messages" class="sidebar-icon"></a></li>
-                    <li><a href="#claims"><img src="images/claimicon.png" alt="Claims" title="Claims" class="sidebar-icon"></a></li>
-                    <li><a href="#contact"><img src="images/contacticon.png" alt="Contact" title="Contact" class="sidebar-icon"></a></li>
+                    <li><a href="#home" aria-label="Home"><img src="images/homeicon.png" alt="Home" title="Home" class="sidebar-icon"></a></li>
+                    <li><a href="#messages" aria-label="Messages"><img src="images/messageicon.jpeg" alt="Messages" title="Messages" class="sidebar-icon"></a></li>
+                    <li><a href="#claims" aria-label="Claims"><img src="images/claimicon.png" alt="Claims" title="Claims" class="sidebar-icon"></a></li>
+                    <li><a href="#contact" aria-label="Contact"><img src="images/contacticon.png" alt="Contact" title="Contact" class="sidebar-icon"></a></li>
                 </ul>
             </nav>
-            
             
             <div class="main-content">
                 <header>
                     <div class="top-right-options">
-                        <button class="file-claim-button">File a Claim</button>
-                        <button class="customize-button"><i class="fas fa-cog"></i> Customize</button>
+                        <button class="file-claim-button" aria-label="File a Claim">File a Claim</button>
+                        <button class="customize-button" aria-label="Customize"><i class="fas fa-cog"></i> Customize</button>
                     </div>
                 </header>
                 
                 <section class="dashboard-main">
-                    <div class="user-image">
-                        <img id="userImage" src="user-placeholder.png" alt="User Image" />
-                        <div class="upload-options">
-                            <input type="file" id="photoUpload" accept="image/*" onchange="previewImage(event)" />
-                            <button onclick="openGallery()">Pick from Gallery</button>
+                    <div class="user-image-container">
+                        <div class="user-image">
+                            <img id="userImage" src="images/download.jpeg" alt="User Image" />
+                            <div class="upload-options">
+                                <input type="file" id="photoUpload" accept="image/*" onchange="previewImage(event)" />
+                                <button onclick="openGallery()" aria-label="Open Gallery">Pick from Gallery</button>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="dashboard-welcome">
-                        <h2>Welcome, John </h2>
+                        <h2>Welcome, John</h2>
                         <div class="grid-container">
-                            <div><button>View Policies</button></div>
-                            <div><button>Make a Payment</button></div>
-                            <div><button>View Claims</button></div>
-                            <div><button>Insurance Card</button></div>
-                            <div><button>About You</button></div>
-                            <div><button>Digital Footprint</button></div>
-                            <div><button>Credit Monitoring</button></div>
-                            <div><img src="images/plus.png" alt="Plus Sign" title="Plus Sign" class="sidebar-icon"/><button>Add a New Member</button></div>
+                            <div><button aria-label="View Policies">View Policies</button></div>
+                            <div><button aria-label="Make a Payment">Make a Payment</button></div>
+                            <div><button aria-label="images/notepad-regular-24.png">View Claims</button></div>
+                            <div><button aria-label="images/id-card-images-24.png">Insurance Card</button></div>
                         </div>
                     </div>
                 </section>
@@ -55,20 +52,18 @@
         </div>
         
         <script>
-        
-        function previewImage(event) {
-            const imgElement = document.getElementById('userImage');
-            imgElement.src = URL.createObjectURL(event.target.files[0]);
-        }
+    function previewImage(event) {
+        const imgElement = document.getElementById('userImage');
+        imgElement.src = URL.createObjectURL(event.target.files[0]);
+    }
 
-       
-        function openGallery() {
-            alert("Open gallery to select an image.");
-            
-        }
+    function openGallery() {
+        alert("Open gallery to select an image.");
+    }
     </script>
     </body>
 </html>
+
 
 
 

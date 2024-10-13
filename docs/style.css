@@ -4,7 +4,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #1c1c1c; 
+    color: #ffffff; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,9 +16,10 @@ body {
     display: flex;
     width: 100%;
 }
+
 .sidebar {
     width: 80px;
-    background-color: #2C3E50;
+    background-color: #333; 
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -41,10 +43,9 @@ body {
     transition: all 0.3s ease;
 }
 
-
 .tooltip {
     visibility: hidden;
-    background-color: #2C3E50;
+    background-color: #FF8C00; 
     color: #fff;
     text-align: center;
     border-radius: 4px;
@@ -61,12 +62,10 @@ body {
     font-size: 14px;
 }
 
-
 .sidebar li:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
-
 
 .sidebar-icon:hover {
     transform: scale(1.2);
@@ -76,14 +75,12 @@ body {
 }
 
 .sidebar-icon:focus {
-    outline: 2px solid #E74C3C;
+    outline: 2px solid #E74C3C; 
 }
-
-
 
 .main-content {
     flex-grow: 1;
-    background-color: #ECF0F1;
+    background-color: #444; 
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -94,7 +91,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #3498DB;
+    background-color: #FF8C00; 
     color: white;
 }
 
@@ -110,7 +107,7 @@ header {
 
 .file-claim-button,
 .customize-button {
-    background-color: #3498DB;
+    background-color: #FF8C00; 
     border: none;
     color: white;
     padding: 10px 20px;
@@ -122,7 +119,7 @@ header {
 
 .file-claim-button:hover,
 .customize-button:hover {
-    background-color: #16A085;
+    background-color: #E67E22; 
 }
 
 .dashboard-main {
@@ -149,7 +146,7 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 4px solid black;
+    border: 4px solid #FF8C00; 
     transition: transform 0.3s ease;
 }
 
@@ -162,7 +159,7 @@ header {
 }
 
 .upload-options button {
-    background-color: #3498DB;
+    background-color: #FF8C00; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -172,7 +169,7 @@ header {
 }
 
 .upload-options button:hover {
-    background-color: #2980B9;
+    background-color: #E67E22; 
 }
 
 .dashboard-welcome {
@@ -181,7 +178,7 @@ header {
 }
 
 .dashboard-welcome h2 {
-    color: #2C3E50;
+    color: #FF8C00; 
     margin-bottom: 20px;
 }
 
@@ -199,7 +196,7 @@ header {
 }
 
 button {
-    background-color: #3498DB;
+    background-color: #FF8C00; 
     color: white;
     border: none;
     padding: 15px 20px;
@@ -208,17 +205,25 @@ button {
     font-size: 16px;
     width: 100%;
     height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #2980B9;
+    background-color: #E67E22; 
 }
 
 button:focus {
-    outline: 2px solid #E74C3C;
+    outline: 2px solid #E74C3C; 
 }
+
+
+
+
+
+
+
+
 
 
 

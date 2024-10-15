@@ -3,49 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CCTJ Insurance Dashboard</title>
-        
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!--provides website icons and toolkits @ fontawesome.com-->
+        <title>CCTJ Insurance </title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="dashboard">
             <nav class="sidebar">
-                <nav class="sidebar">
-                    <nav class="sidebar">
-                        <ul>
-                            <li>
-                                <a href="#home" aria-label="Home" title="Home">
-                                    <img src="images/home2.jpg" alt="Home" class="sidebar-icon">
-                                    <span class="tooltip">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#messages" aria-label="Messages" title="Messages">
-                                    <img src="images/message.jpg" alt="Messages"
-                                        class="sidebar-icon">
-                                    <span class="tooltip">Messages</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#claims" aria-label="Claims" title="Claims">
-                                    <img src="images/claims.jpg" alt="Claims" class="sidebar-icon">
-                                    <span class="tooltip">Claims</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact" aria-label="Contact" title="Contact">
-                                    <img src="images/contact.jpg" alt="Contact" class="sidebar-icon">
-                                    <span class="tooltip">Contact</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </nav>
+                <ul>
+                    <li>
+                        <a href="home.html" aria-label="Home" title="Home">
+                            <img src="images/homesmile.jpg" alt="Home" class="sidebar-icon">
+                            <span class="tooltip">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html" aria-label="Messages" title="Messages">
+                            <img src="images/message.jpg" alt="Messages" class="sidebar-icon">
+                            <span class="tooltip">Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="viewClaims.html" aria-label="Claims" title="Claims">
+                            <img src="images/claims.jpg" alt="Claims" class="sidebar-icon">
+                            <span class="tooltip">Claims History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contactAgent.html" aria-label="Contact" title="Contact">
+                            <img src="images/contact.jpg" alt="Contact" class="sidebar-icon">
+                            <span class="tooltip">Contact Agent</span>
+                        </a>
+                    </li>
+                </ul>
             </nav>
             <div class="main-content">
                 <header>
                     <div class="website-title">
-                        <h1>CCTJ Insurance Dashboard</h1>
+                        <h1>CCTJ Insurance </h1>
                     </div>
                     <div class="top-right-options">
                         <button class="file-claim-button" aria-label="File a Claim">File a
@@ -61,6 +58,7 @@
                             <div class="upload-options">
                                 <input type="file" id="photoUpload" accept="image/*"
                                     onchange="previewImage(event)" />
+                                <!-- access to photos to upload -->
                                 <button onclick="openGallery()" aria-label="Open Gallery">Pick from
                                     Gallery</button>
                             </div>
@@ -70,22 +68,32 @@
                         <h2>Welcome, John</h2>
                         <div class="grid-container">
                             <div>
-                                <button aria-label="View Policies">View Policies</button>
+                                <a href="viewPolicies.html" aria-label="View Policies"
+                                    class="button">View Policies</a>
                             </div>
                             <div>
-                                <button aria-label="Make a Payment">Make a Payment</button>
+                                <a href="makePayment.html" aria-label="Make a Payment"
+                                    class="button">Make a Payment</a>
                             </div>
                             <div>
-                                <button aria-label="View Claims">View Claims</button>
+                                <a href="viewClaims.html" aria-label="View Claims" class="button"
+                                    >View Claims</a>
                             </div>
                             <div>
-                                <button aria-label="Insurance Card">Insurance Card</button>
+                                <a href="insuranceCard.html" aria-label="Insurance Card"
+                                    class="button">Insurance Card</a>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+        <footer>
+            <div class="footer">
+                <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
+                    King | Tyler Dollard | Jermain Shields | All Rights Reserved</p>
+            </div>
+        </footer>
         <script>
             function previewImage(event) {
                 const imgElement = document.getElementById('userImage');

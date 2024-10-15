@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>File Claims</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="top-right-options">
+            <button class="back-button" onclick="goBack()">Back</button>
+            <header>
+                <h1>File Claims</h1>
+            </header>
+        </div>
+        <main>
+            <div class="dashboard">
+                <div class="image-container">
+                    <img src="images/viewclaims.jpg" alt="Miro: screen shot" class="image-class">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
+                    King | Tyler Dollard | Jermain Shields | All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            function previewImage(event) {
+                const imgElement = document.getElementById('userImage');
+                imgElement.src = URL.createObjectURL(event.target.files[0]);
+            }
+            
+            function openGallery() {
+                alert("Open gallery to select an image.");
+            }
+            function goBack() {
+                window.history.back();
+            }</script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insurance card</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="top-right-options">
+            <button class="back-button" onclick="goBack()">Back</button>
+            <!-- button to go back to previous screen -->
+            <header>
+                <h1>View Insurance Card</h1>
+            </header>
+        </div>
+        <main>
+            <div class="dashboard">
+                <div class="image-container">
+                    <img src="images/insuranceCard.jpg" alt="Miro: screen shot" class="image-class"
+                    >
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
+                    King | Tyler Dollard | Jermain Shields | All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            function previewImage(event) {
+                /* so users can select an image */
+                const imgElement = document.getElementById('userImage');
+                imgElement.src = URL.createObjectURL(event.target.files[0]);
+            }
+            
+            function openGallery() {
+                /* If a gallary was available, this would popup that gallery */
+                alert("Open gallery to select an image.");
+            }
+            function goBack() {
+                /* To control the Back button using the window history */
+                window.history.back();
+            }</script>
+    </body>
+</html>

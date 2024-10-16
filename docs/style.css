@@ -120,7 +120,7 @@ header { /*  to keep header ontop */
     align-items: center;
 }
 
-.file-claim-button,
+.file-claim-button,   /*  stacked to apply to all  */
 .customize-button,
 .back-button {
     background-color: #D35400;
@@ -289,7 +289,7 @@ footer { /*  added footer */
     text-decoration: underline;
 }
 
-@media (max-width : 768px) { /*  to make mobile friendly */
+@media (max-width : 768px) { /*  to make mobile friendly "fingers crossed" */
     .sidebar {
         width: 60px;
     }
@@ -367,7 +367,7 @@ footer { /*  added footer */
 }
 
 
-.back-button {
+.back-button {                       /*  added back button and needed to style  */
     background-color: #D35400;
     border: black;
     color: white;
@@ -384,7 +384,7 @@ footer { /*  added footer */
 }
 
 
-.image-container {
+.image-container {   /*  to control the images on the page */
     display: flex;
     justify-content: center;
     align-items: center;

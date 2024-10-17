@@ -65,7 +65,6 @@
   
         <div class="form-container">
             <h2>Customize Your Dashboard</h2>
-            <!-- Dropdown for Button Size -->
             <div class="form-group">
                 <label for="sizeOptions">Button Size:</label>
                 <select id="sizeOptions">
@@ -75,7 +74,6 @@
                 </select>
             </div>
             
-            <!-- Dropdown for Grid Columns -->
             <div class="form-group">
                 <label for="columnOptions">Number of Columns:</label>
                 <select id="columnOptions">
@@ -90,7 +88,6 @@
             <button onclick="saveChanges()">Save Changes</button>
         </div>
         
-        <!-- Preview grid to test the changes -->
         <div id="previewContainer" class="grid-container medium" style="grid-template-columns: repeat(3, 1fr);">
             <div>
                 <a href="viewPolicies.html" aria-label="View Policies" class="button">View Policies</a>
@@ -110,22 +107,18 @@
         </main>
         
         <script>
-            // Apply changes for button size and number of columns
             function applyChanges() {
                 const sizeOption = document.getElementById('sizeOptions').value;
                 const columnOption = document.getElementById('columnOptions').value;
 
                 const previewContainer = document.getElementById('previewContainer');
                 
-                // Update button sizes
                 previewContainer.classList.remove('small', 'medium', 'large');
                 previewContainer.classList.add(sizeOption);
 
-                // Update column count
                 previewContainer.style.gridTemplateColumns = `repeat(${columnOption}, 1fr)`;
             }
 
-            // Save changes to localStorage (or could be replaced by actual file handling in a real app)
             function saveChanges() {
                 const sizeOption = document.getElementById('sizeOptions').value;
                 const columnOption = document.getElementById('columnOptions').value;
@@ -136,7 +129,6 @@
                 alert('Changes saved! Now navigate back to the main page to see the updates.');
             }
 
-            // On page load, restore saved settings
             window.onload = function() {
                 const savedSize = localStorage.getItem('buttonSize');
                 const savedColumns = localStorage.getItem('gridColumns');

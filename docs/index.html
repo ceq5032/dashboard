@@ -13,7 +13,6 @@
                 gap: 10px;
             }
 
-            /* Button sizes */
             .small .button {
                 font-size: 12px;
                 padding: 5px 10px;
@@ -44,7 +43,6 @@
                 background-color: #0056b3;
             }
 
-            /* Dropdown styling */
             .size-selector {
                 margin-bottom: 20px;
             }
@@ -106,7 +104,6 @@
                     <div class="dashboard-welcome">
                         <h2>Welcome, John</h2>
                         
-                        <!-- Size selector -->
                         <div class="size-selector">
                             <label for="sizeOptions">Button Size: </label>
                             <select id="sizeOptions" onchange="changeButtonSize()">
@@ -116,7 +113,6 @@
                             </select>
                         </div>
                         
-                        <!-- Grid container for buttons -->
                         <div id="gridContainer" class="grid-container medium">
                             <div>
                                 <a href="viewPolicies.html" aria-label="View Policies" class="button">View Policies</a>
@@ -151,15 +147,12 @@
                 alert("Open gallery to select an image.");
             }
 
-            // Change button size based on the dropdown selection
             function changeButtonSize() {
                 const gridContainer = document.getElementById('gridContainer');
                 const selectedSize = document.getElementById('sizeOptions').value;
 
-                // Remove all size classes (small, medium, large)
                 gridContainer.classList.remove('small', 'medium', 'large');
 
-                // Add the selected size class
                 gridContainer.classList.add(selectedSize);
             }
         </script>

@@ -3,11 +3,52 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <!--provides website icons and toolkits @ fontawesome.com-->
-        <title>CCTJ Insurance </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>CCTJ Insurance</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            /* Button sizes */
+            .small .button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+
+            .medium .button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .large .button {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+
+            .button {
+                display: inline-block;
+                background-color: #007bff;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+            /* Dropdown styling */
+            .size-selector {
+                margin-bottom: 20px;
+            }
+        </style>
     </head>
     <body>
         <div class="dashboard">
@@ -42,13 +83,13 @@
             <div class="main-content">
                 <header>
                     <div class="website-title">
-                        <h1>CCTJ Insurance </h1>
+                        <h1>CCTJ Insurance</h1>
                     </div>
                     <div class="top-right-options">
-                        <button class="file-claim-button" aria-label="File a Claim">File a
-                            Claim</button>
-                        <button class="customize-button" aria-label="Customize"><i
-                                class="fas fa-cog"></i> Customize</button>
+                        <button class="file-claim-button" aria-label="File a Claim">File a Claim</button>
+                        <button class="customize-button" aria-label="Customize">
+                            <i class="fas fa-cog"></i> Customize
+                        </button>
                     </div>
                 </header>
                 <section class="dashboard-main">
@@ -56,32 +97,37 @@
                         <div class="user-image">
                             <img id="userImage" src="images/download.jpeg" alt="User Image" />
                             <div class="upload-options">
-                                <input type="file" id="photoUpload" accept="image/*"
-                                    onchange="previewImage(event)" />
-                                <!-- access to photos to upload -->
-                                <button onclick="openGallery()" aria-label="Open Gallery">Pick from
-                                    Gallery</button>
+                                <input type="file" id="photoUpload" accept="image/*" onchange="previewImage(event)" />
+                                <button onclick="openGallery()" aria-label="Open Gallery">Pick from Gallery</button>
                             </div>
                         </div>
                     </div>
                     <div class="dashboard-welcome">
                         <h2>Welcome, John</h2>
-                        <div class="grid-container">
+                        
+                        <!-- Size selector -->
+                        <div class="size-selector">
+                            <label for="sizeOptions">Button Size: </label>
+                            <select id="sizeOptions" onchange="changeButtonSize()">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Grid container for buttons -->
+                        <div id="gridContainer" class="grid-container medium">
                             <div>
-                                <a href="viewPolicies.html" aria-label="View Policies"
-                                    class="button">View Policies</a>
+                                <a href="viewPolicies.html" aria-label="View Policies" class="button">View Policies</a>
                             </div>
                             <div>
-                                <a href="makePayment.html" aria-label="Make a Payment"
-                                    class="button">Make a Payment</a>
+                                <a href="makePayment.html" aria-label="Make a Payment" class="button">Make a Payment</a>
                             </div>
                             <div>
-                                <a href="viewClaims.html" aria-label="View Claims" class="button"
-                                    >View Claims</a>
+                                <a href="viewClaims.html" aria-label="View Claims" class="button">View Claims</a>
                             </div>
                             <div>
-                                <a href="insuranceCard.html" aria-label="Insurance Card"
-                                    class="button">Insurance Card</a>
+                                <a href="insuranceCard.html" aria-label="Insurance Card" class="button">Insurance Card</a>
                             </div>
                         </div>
                     </div>
@@ -90,18 +136,31 @@
         </div>
         <footer>
             <div class="footer">
-                <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
-                    King | Tyler Dollard | Jermain Shields | All Rights Reserved</p>
+                <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb King | Tyler Dollard | Jermain Shields | All Rights Reserved</p>
             </div>
         </footer>
+        
         <script>
             function previewImage(event) {
                 const imgElement = document.getElementById('userImage');
                 imgElement.src = URL.createObjectURL(event.target.files[0]);
             }
-            
+
             function openGallery() {
                 alert("Open gallery to select an image.");
-            }</script>
+            }
+
+            // Change button size based on the dropdown selection
+            function changeButtonSize() {
+                const gridContainer = document.getElementById('gridContainer');
+                const selectedSize = document.getElementById('sizeOptions').value;
+
+                // Remove all size classes (small, medium, large)
+                gridContainer.classList.remove('small', 'medium', 'large');
+
+                // Add the selected size class
+                gridContainer.classList.add(selectedSize);
+            }
+        </script>
     </body>
 </html>

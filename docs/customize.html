@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Customize Dashboard</title>
+        <style>
+            .grid-container {
+                display: grid;
+                gap: 10px;
+            }
+            /* Button sizes */
+            .small .button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+            .medium .button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .large .button {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+            .button {
+                display: inline-block;
+                background-color: #007bff;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+            .button:hover {
+                background-color: #0056b3;
+            }
+            .form-container {
+                margin: 20px;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            label {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <h1>Customize Your Dashboard</h1>
+            <!-- Dropdown for Button Size -->
+            <div class="form-group">
+                <label for="sizeOptions">Button Size:</label>
+                <select id="sizeOptions">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            
+            <!-- Dropdown for Grid Columns -->
+            <div class="form-group">
+                <label for="columnOptions">Number of Columns:</label>
+                <select id="columnOptions">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            
+            <button onclick="applyChanges()">Apply Changes</button>
+            <button onclick="saveChanges()">Save Changes</button>
+        </div>
+        
+        <!-- Preview grid to test the changes -->
+        <div id="previewContainer" class="grid-container medium" style="grid-template-columns: repeat(3, 1fr);">
+            <div>
+                <a href="viewPolicies.html" aria-label="View Policies" class="button">View Policies</a>
+            </div>
+            <div>
+                <a href="makePayment.html" aria-label="Make a Payment" class="button">Make a Payment</a>
+            </div>
+            <div>
+                <a href="viewClaims.html" aria-label="View Claims" class="button">View Claims</a>
+            </div>
+            <div>
+                <a href="insuranceCard.html" aria-label="Insurance Card" class="button">Insurance Card</a>
+            </div>
+        </div>
+        
+        <script>
+            // Apply changes for button size and number of columns
+            function applyChanges() {
+                const sizeOption = document.getElementById('sizeOptions').value;
+                const columnOption = document.getElementById('columnOptions').value;
+
+                const previewContainer = document.getElementById('previewContainer');
+                
+                // Update button sizes
+                previewContainer.classList.remove('small', 'medium', 'large');
+                previewContainer.classList.add(sizeOption);
+
+                // Update column count
+                previewContainer.style.gridTemplateColumns = `repeat(${columnOption}, 1fr)`;
+            }
+
+            // Save changes to localStorage (or could be replaced by actual file handling in a real app)
+            function saveChanges() {
+                const sizeOption = document.getElementById('sizeOptions').value;
+                const columnOption = document.getElementById('columnOptions').value;
+
+                localStorage.setItem('buttonSize', sizeOption);
+                localStorage.setItem('gridColumns', columnOption);
+
+                alert('Changes saved! Now navigate back to the main page to see the updates.');
+            }
+
+            // On page load, restore saved settings
+            window.onload = function() {
+                const savedSize = localStorage.getItem('buttonSize');
+                const savedColumns = localStorage.getItem('gridColumns');
+
+                if (savedSize) {
+                    document.getElementById('sizeOptions').value = savedSize;
+                    document.getElementById('previewContainer').classList.add(savedSize);
+                }
+                if (savedColumns) {
+                    document.getElementById('columnOptions').value = savedColumns;
+                    document.getElementById('previewContainer').style.gridTemplateColumns = `repeat(${savedColumns}, 1fr)`;
+                }
+            };
+        </script>
+    </body>
+</html>

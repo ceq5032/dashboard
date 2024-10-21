@@ -400,7 +400,11 @@ footer { /*  added footer */
 }
 
 
-
+giscus-widget {
+  display: flex;
+  margin: auto;
+  max-width: 640px;
+}
 
 
 

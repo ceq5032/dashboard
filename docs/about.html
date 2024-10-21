@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="top-right-options">
+            <button class="back-button" onclick="goBack()">Back</button>
+            <header>
+                <h1>About Our Prototype </h1>
+            </header>
+        </div>
+        <main>
+          <p> Info about our project goes here. </p>
+        </main>
+        
+        <div class="comments-container">
+        <giscus-widget
+            id="comments"
+            repo="ceq5032/dashboard"
+            repoid="R_kgDOM9cfKA"
+            category="Announcements"
+            categoryid="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
+            mapping="pathname"
+          
+            reactionsenabled="1"
+            emitmetadata="0"
+            inputposition="bottom"
+            theme="dark"
+            lang="en"
+            loading="lazy"
+            ></giscus-widget>
+        
+        
+        <footer>
+            <div class="footer">
+                <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
+                    King | Tyler Dollard | Jermain Shields | All Rights Reserved</p>
+            </div>
+        </footer>
+        
+        <script type="module" src="https://esm.sh/giscus"></script>
+        <script>
+            function previewImage(event) {
+                const imgElement = document.getElementById('userImage');
+                imgElement.src = URL.createObjectURL(event.target.files[0]);
+            }
+            
+            function openGallery() {
+                alert("Open gallery to select an image.");
+            }
+            function goBack() {
+                window.history.back();
+            }</script>
+    </body>
+</html>

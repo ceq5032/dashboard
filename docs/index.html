@@ -144,24 +144,6 @@
             </div>
         </footer>
         
-        <script>
-            function previewImage(event) {
-                const imgElement = document.getElementById('userImage');
-                imgElement.src = URL.createObjectURL(event.target.files[0]);
-            }
-
-            function openGallery() {
-                alert("Open gallery to select an image.");
-            }
-
-            function changeButtonSize() {
-                const gridContainer = document.getElementById('gridContainer');
-                const selectedSize = document.getElementById('sizeOptions').value;
-
-                gridContainer.classList.remove('small', 'medium', 'large');
-
-                gridContainer.classList.add(selectedSize);
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>

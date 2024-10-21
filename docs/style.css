@@ -26,7 +26,7 @@ body {
 
 .sidebar {
     width: 80px;
-    background-color: #c1c2be;
+    background-color: #333;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -406,6 +406,10 @@ giscus-widget {
   max-width: 640px;
 }
 
+.comments-container {
+  max-height: 640px;
+  overflow-y: scroll;
+}
 
 
 

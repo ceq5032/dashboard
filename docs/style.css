@@ -6,8 +6,8 @@ html,
 body {
     height: 100%;
     margin: 0;
-    
- 
+
+
 }
 
 body {
@@ -122,7 +122,7 @@ header { /*  to keep header ontop */
     align-items: center;
 }
 
-.file-claim-button,   /*  stacked to apply to all  */
+.file-claim-button, /*  stacked to apply to all  */
 .customize-button,
 .back-button {
     background-color: #D35400;
@@ -369,7 +369,7 @@ footer { /*  added footer */
 }
 
 
-.back-button {                       /*  added back button and needed to style  */
+.back-button { /*  added back button and needed to style  */
     background-color: #D35400;
     border: black;
     color: white;
@@ -386,7 +386,7 @@ footer { /*  added footer */
 }
 
 
-.image-container {   /*  to control the images on the page */
+.image-container { /*  to control the images on the page */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,16 +404,16 @@ footer { /*  added footer */
 
 
 .giscus-widget {
-  display: flex;
-  margin: auto;
-  max-width: 640px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    margin: auto;
+    max-width: 640px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 
 .comments-container {
-  max-height: 640px;
-  overflow-y: scroll;
+    max-height: 640px;
+    overflow-y: scroll;
 }
 
 
@@ -427,20 +427,20 @@ footer { /*  added footer */
 
 .about h3 {
     margin-bottom: 5px;
-    text-align:left;
-   
-  
-   
+    text-align: left;
+
+
+
 }
 
 
 
-.about p{
- margin: 0 auto;
-    
+.about p {
+    margin: 0 auto;
+
     text-align: left;
     max-width: 550px;
-    
+
 }
 
 
@@ -450,10 +450,9 @@ footer { /*  added footer */
     text-align: center;
 }
 
-.container div{
+.container div {
     text-align: center;
 }
-
 
 
 

@@ -12,36 +12,64 @@
         <div class="top-right-options">
             <button class="back-button" onclick="goBack()">Back</button>
             <header>
+                
                 <h1>About Our Prototype </h1>
             </header>
         </div>
         <main>
-          <p> Info about our project goes here. </p>
+            
+            <div class="container">
+            <div class="about">
+                
+                <p> Our prototype website was developed as part of a discovery flow project in collaboration with a local insurance company. The aim was to learn and apply service design principles through the following stages: Initiation, Research, Ideation, and Prototyping. The final output was a customizable insurance dashboard prototype. </p>
+                
+              
+                
+                <h3> Initiation </h3>
+                <p>  Our team CCTJ consisted of four members. Chelsea Quijas, Caleb King, Tyler Dollard, and Jermain Shields. We created a hypothesis based on our project needs. Identified the key audience for the dashboard and defined a vision for the dashboard.</p>
+                
+                <h3> Research </h3>
+                <p>We analyzed publicly available information on insurance dashboards and general dashboard designs. We also conducted interviews with fellow students to understand their experiences with insurance dashboards and identify what information they would find most useful to display. </p>
+                
+               <h3> Ideation </h3>
+                <p> Based on the research findings, we brainstormed and created ideas for the dashboard design. We begin to visualize how the interface could look and function.</p>
+                
+                <h3> Prototyping </h3>
+                <p> Our goal was to create a highly customizable dashboard giving users a sense of ownership. We wanted to include features with customizable colors, button sizes, and information displayed. Enhanced security options to allow users control over their data. Our design was initially sketched on paper and then developed using HTML, CSS, and Java.</p>
+            </div>
+           
+            
+            
+            
+            <div class="comment-container">
+                <giscus-widget
+                    id="comments"
+                    repo="ceq5032/dashboard"
+                    repoid="R_kgDOM9cfKA"
+                    category="Announcements"
+                    categoryid="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
+                    mapping="pathname"
+                    
+                    reactionsenabled="1"
+                    emitmetadata="0"
+                    inputposition="bottom"
+                    theme="dark"
+                    lang="en"
+                    loading="lazy"
+                    ></giscus-widget>
+            </div>
+            
+            </div>
         </main>
         
-        <div class="comments-container">
-        <giscus-widget
-            id="comments"
-            repo="ceq5032/dashboard"
-            repoid="R_kgDOM9cfKA"
-            category="Announcements"
-            categoryid="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
-            mapping="pathname"
-          
-            reactionsenabled="1"
-            emitmetadata="0"
-            inputposition="bottom"
-            theme="dark"
-            lang="en"
-            loading="lazy"
-            ></giscus-widget>
-        
-        
+     
+    
         <footer>
             <div class="footer">
                 <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
                     King | All Rights Reserved</p>
             </div>
+           
         </footer>
         
         <script type="module" src="https://esm.sh/giscus"></script>

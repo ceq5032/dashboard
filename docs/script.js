@@ -1,3 +1,5 @@
+     /*   */
+     
      function previewImage(event) {
                 const imgElement = document.getElementById('userImage');
                 imgElement.src = URL.createObjectURL(event.target.files[0]);
@@ -16,7 +18,7 @@
                 gridContainer.classList.add(selectedSize);
             }
             
-          
+        
             function goBack() {
                 window.history.back();
             }
@@ -57,3 +59,6 @@
                     document.getElementById('previewContainer').style.gridTemplateColumns = `repeat(${savedColumns}, 1fr)`;
                 }
             };
+            
+            
+            

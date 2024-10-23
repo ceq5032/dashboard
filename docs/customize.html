@@ -6,64 +6,21 @@
        <link rel="stylesheet" href="style.css">
        
        
-       <style>
-            .grid-container {
-                display: grid;
-                gap: 10px;
-            }
-            /* Button sizes */
-            .small .button {
-                font-size: 12px;
-                padding: 5px 10px;
-            }
-            .medium .button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-            .large .button {
-                font-size: 20px;
-                padding: 15px 30px;
-            }
-            .button {
-                display: inline-block;
-                background-color: #007bff;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                padding: 10px;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-            }
-            .button:hover {
-                background-color: #0056b3;
-            }
-            .form-container {
-                margin: 20px;
-            }
-            .form-group {
-                margin-bottom: 15px;
-            }
-            label {
-                margin-right: 10px;
-            }
-        </style>
-
+       
         <title>CCTJ</title>
        </head>
     <body>
+        <!-- declaring top button functions first -->
         <div class="top-right-options">
             <button class="back-button" onclick="goBack()">Back</button>
             <header>
                <h1> Customize </h1>
             </header>
         </div>
-  
-   
-    
-   
         <main>
   
         <div class="form-container">
+            <!-- column size maker -->
             <h2>Customize Your Dashboard</h2>
             <div class="form-group">
                 <label for="sizeOptions">Button Size:</label>
@@ -73,21 +30,21 @@
                     <option value="large">Large</option>
                 </select>
             </div>
-            
+            <!-- column number grouping -->
             <div class="form-group">
                 <label for="columnOptions">Number of Columns:</label>
                 <select id="columnOptions">
                     <option value="1">1</option>
                     <option value="2">2</option>
-                    <option value="3" selected>3</option>
+                    <option value="3" selected>3</option> <!-- selected number is still 2 when loaded;  -->
                     <option value="4">4</option>
                 </select>
             </div>
-            
+            <!-- adding apply and save buttons -->
             <button onclick="applyChanges()">Apply Changes</button>
             <button onclick="saveChanges()">Save Changes</button>
         </div>
-        
+        <!-- Grid Buttons  -->
         <div id="previewContainer" class="grid-container medium" style="grid-template-columns: repeat(3, 1fr);">
             <div>
                 <a href="viewPolicies.html" aria-label="View Policies" class="button">View Policies</a>
@@ -105,6 +62,7 @@
         
         
         </main>
+        <!-- Copyright -->
         <footer>
             <div class="footer">
                 <p>&copy; 2024 Insurance Dashboard | PSU Behrend DIGIT400 | Chelsea Quijas | Caleb
